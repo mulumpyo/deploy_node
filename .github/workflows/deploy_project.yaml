@@ -48,7 +48,7 @@ jobs:
             cd ~/${{ github.repository }}
             git pull origin main
             cd server
-            npm i            
+            npm ci            
             pm2 restart app || pm2 start app.js --name "app"
             pm2 save
           EOF
